@@ -1,0 +1,49 @@
+<div ng-include="filtros.menuTemplate.url" ng-init="inicio()"></div>
+<div ng-repeat="factor in factores track by $index ">
+  <div google-chart chart="chart[$index]" style="{{chart.cssStyle}}"/>
+</div>
+<div class="container" >
+
+<!-- <canvas width="400" height="400" id="base" class="chart-base" chart-type="type"
+  chart-data="data" chart-labels="labels" chart-legend="true" >
+</canvas>  -->
+
+
+  <a class="waves-effect waves-light btn" ng-click="mostrar()">button</a>
+
+<!-- 	<H1>Cron cada 1 hora </H1>
+
+    <div class="input-field col s6 offset-s3"  >
+          <input id="search" type="search" required ng-model="query[queryBy]">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+    </div>
+
+    <table class="highlight">
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Rendimiento</th>
+              <th>Latencia</th>
+              <th>Status</th>
+              <th>Tiempo de respuesta</th>
+              <th>Disponibilidad</th>
+              <th>Confiabilidad</th>
+              <th>Fecha</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat ="api in ApisQuality | filter:query | orderBy: ordenarPor:true">
+            <td>{{api.nombre}}</td>
+            <td>{{api.rendimiento}}[ms]</td>
+            <td>{{api.latencia}}[ms]</td>
+            <td>{{api.status}}</td>
+            <td>{{api.tiempo_de_respuesta}}[ms]</td>
+            <td>{{api.disponibilidad}}%</td>
+            <td>{{api.confiabilidad}}%</td>
+            <td>{{api.fecha | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+          </tr>
+        </tbody>
+      </table> -->
+</div>

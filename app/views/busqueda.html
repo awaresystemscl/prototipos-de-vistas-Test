@@ -1,0 +1,27 @@
+<div ng-include="busqueda.menuTemplate.url" ng-init="inicio()"></div>
+<div class="container">
+	<div class="input-field col s6 offset-s3"  >
+          <input id="search" type="search" required ng-model="query[queryBy]">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+    </div>
+
+    <table class="highlight">
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Producto</th>
+              <th>Precio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat = "venta in ventas | filter:query | orderBy: ordenarPor" >
+            <td>{{venta.nombre}}</td>
+            <td>{{venta.producto}}</td>
+            <td>$ {{venta.precio}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
